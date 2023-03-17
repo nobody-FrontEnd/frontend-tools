@@ -1,0 +1,14 @@
+{
+    "formatter": {
+      "enabled": true,
+      "ignore": ["./dist/*", "./es/**/*", "./lib/**/*", "_site/**/*", "./.next/**/*"],
+      "indentStyle": "space",
+      "lineWidth": 100,
+      "indentSize": 4
+    },
+    "javascript": {
+      "formatter": {
+        "quoteStyle": "single"
+      }
+    }
+  }
