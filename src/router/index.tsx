@@ -1,9 +1,7 @@
 import React, { LazyExoticComponent } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import { IconHome, IconMosaic } from '@arco-design/web-react/icon';
-const LazyImportComponent = (props: {
-    lazyChildren: LazyExoticComponent<() => JSX.Element>;
-}) => {
+const LazyImportComponent = (props: { lazyChildren: LazyExoticComponent<() => JSX.Element> }) => {
     return (
         <React.Suspense>
             <props.lazyChildren />
@@ -13,7 +11,7 @@ const LazyImportComponent = (props: {
 
 const Main = React.lazy(() => import('../views/Main'));
 const Home = React.lazy(() => import('../views/Home'));
-const JSON = React.lazy(() => import('../views/json/index'));
+const toolList = React.lazy(() => import('../views/toolList/index'));
 const routers: {
     path: string;
     element: React.LazyExoticComponent<() => JSX.Element>;
@@ -34,8 +32,20 @@ const routers: {
     },
     {
         path: '/json',
-        element: JSON,
+        element: toolList,
         name: 'json',
+        icon: () => {
+            return (
+                <>
+                    <IconMosaic />
+                </>
+            );
+        },
+    },
+    {
+        path: '/dataTime',
+        element: toolList,
+        name: '日期/时间',
         icon: () => {
             return (
                 <>

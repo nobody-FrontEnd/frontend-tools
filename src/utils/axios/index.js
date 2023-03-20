@@ -19,19 +19,22 @@ export async function setupAxios(configParams) {
         timeout: 30 * 1000,
     });
     // 实例响应拦截
-    instance.interceptors.response.use((response) => {
-        const res = response.data;
-        if (res.status !== OK_STATUS) {
+    instance.interceptors.response.use(
+        (response) => {
+            const res = response.data;
+            if (res.status !== OK_STATUS) {
+                Message.error('请求错误');
+                return Promise.reject(res.message || 'Error');
+            }
+            return res.data;
+        },
+        (error) => {
             Message.error('请求错误');
-            return Promise.reject(res.message || 'Error');
-        }
-        return res.data;
-    }, (error) => {
-        Message.error('请求错误');
-        if (!NO_MESSAGE_ERROR.includes(error.message)) {
-            return Promise.reject(error.message);
-        }
-    });
+            if (!NO_MESSAGE_ERROR.includes(error.message)) {
+                return Promise.reject(error.message);
+            }
+        },
+    );
     return [instance];
 }
 /**
