@@ -1,0 +1,16 @@
+export const network: jsonDataType[] = [
+    { name: 'CIDR 计算器', path: '/network/cidr-calculator' },
+    { name: 'DNS 查询', path: '/network/dns-lookup' },
+    { name: 'Hosts Editor', path: '/network/hosts-editor' },
+    { name: 'Http 状态码参考', path: '/network/http-code' },
+    { name: 'IP 格式化', path: '/network/ip-formatter' },
+    { name: '查询 IP 地址', path: '/network/ip-location' },
+    { name: '我的 IP 信息', path: '/network/ip' },
+    { name: 'Ping', path: '/network/ping' },
+    { name: '端口清单', path: '/network/port-cheat-sheet' },
+    { name: '请求发送器', path: '/network/request-sender' },
+    { name: '路由追踪', path: '/network/traceroute' },
+    { name: 'User Agent 解析器', path: '/network/user-agent-parser' },
+    { name: 'VPC Planner', path: '/network/vpc-planner' },
+    { name: 'Whois', path: '/network/whois' },
+];

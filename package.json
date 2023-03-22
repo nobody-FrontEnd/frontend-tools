@@ -16,12 +16,14 @@
   },
   "dependencies": {
     "@arco-design/web-react": "^2.46.0",
+    "@arco-iconbox/react-nobody-frontend-icon": "^0.0.1",
     "axios": "^1.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0"
   },
   "devDependencies": {
+    "@iconify/react": "^4.1.0",
     "@types/color-string": "^1.5.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",

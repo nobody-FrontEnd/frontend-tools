@@ -1,4 +1,3 @@
-import { TabelPropsType } from './typing';
 import { Table as ATable } from '@arco-design/web-react';
 import { useEffect, useState } from 'react';
 import { useGet } from '../../utils/axios';

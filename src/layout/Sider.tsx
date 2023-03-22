@@ -14,10 +14,11 @@ function Sider() {
     // console.log()
     const location = useLocation();
     const navigate = useNavigate();
+    console.log(location.pathname);
     return (
         <>
             <Sider
-                className={'h-full'}
+                style={{ height: '100vh' }}
                 collapsed={collapsed}
                 onCollapse={handleCollapsed}
                 collapsible={true}
@@ -26,7 +27,7 @@ function Sider() {
             >
                 <div className='p-2 text-center font-bold'>Logo</div>
                 <Menu defaultSelectedKeys={['0_3']} style={{ width: '100%' }}>
-                    {routers.map((item: any) => {
+                    {routers.map((item: customRouter) => {
                         return (
                             <MenuItem
                                 onClick={() => navigate(item.path)}

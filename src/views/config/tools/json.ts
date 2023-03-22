@@ -1,5 +1,3 @@
-import { type jsonDataType } from './config';
-
 export const json: jsonDataType[] = [
     {
         name: 'JSON美化',

@@ -6,9 +6,9 @@ import { Outlet } from 'react-router-dom';
 function Main() {
     const Content = Layout.Content;
     return (
-        <Layout className='layout-collapse-demo w-screen h-screen flex-row'>
+        <Layout style={{ height: '100vh' }} className='layout-collapse-demo w-screen flex-row'>
             <Sider />
-            <Layout>
+            <Layout className={'overflow-y-scroll h-full'}>
                 {/* <Header style={{ paddingLeft: 20 }}>Header</Header> */}
                 <Layout style={{ padding: '12px' }}>
                     {/* <Breadcrumb style={{ margin: '16px 0' }}>

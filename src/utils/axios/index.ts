@@ -45,11 +45,9 @@ let instance: AxiosInstance = axios.create({});
  * @param configParams :其他配置信息，如后台正常返回状态码，token名称等
  */
 export async function setupAxios(configParams?: ConfigParams) {
-    const { OK_STATUS, NO_MESSAGE_ERROR, TOKEN_PREFIX_STR, IS_MOCK, TOKEN_KEY } = {
+    const { OK_STATUS, NO_MESSAGE_ERROR } = {
         OK_STATUS: 200,
         NO_MESSAGE_ERROR: ['canceled'],
-        TOKEN_PREFIX_STR: '',
-        IS_MOCK: false,
         ...configParams,
     };
 
